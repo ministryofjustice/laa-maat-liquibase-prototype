@@ -8,3 +8,14 @@ env/
 *.code-workspace
 *.sha256
 terraform.tfstate
+bin/
+.java-version
+.gradle/
+build/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
