@@ -9,3 +9,27 @@ This repository contains a prototype implementation of a lambda function designe
 ## Dockerised Oracle Database Setup
 
 See [here](docker/oracle-docker/README.md)
+
+## Running Liquibase updates against a local database
+
+1. Build the project:
+```
+./gradlew clean build
+```
+2. Set the required environment variables:
+```
+ export DB_USER=LIQUIBASEADMIN  
+ export DB_PASS=<your db password>
+ export DB_HOST=localhost 
+ export DB_PORT=1521 
+ export DB_NAME=FREE
+```
+3. Run the jar file:
+```
+java -jar ./build/libs/laa-maat-liquibase-prototype-1.0-SNAPSHOT.jar
+```
+
+NOTE: Currently the changesets and changlogs are included in the jar file therefore we have to rebuild
+the jar file if we edit the files. This can be changed at a later date to use a `FileSystemResourceAccessor` instead 
+of the `ClassLoaderResourceAccessor` that is currently used. We could then take in the file path as an input
+to make the code more flexible
