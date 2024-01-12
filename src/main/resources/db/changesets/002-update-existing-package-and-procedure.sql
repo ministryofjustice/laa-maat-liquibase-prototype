@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset mtac50
+--changeset mtac50:update-package
 CREATE OR REPLACE PACKAGE BODY TOGDATA.employee AS
 
     PROCEDURE get_employee_salary(p_employee_id IN NUMBER, p_salary OUT NUMBER) IS
