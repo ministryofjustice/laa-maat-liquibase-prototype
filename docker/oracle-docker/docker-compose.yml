@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  oracle_db:
+    image: gvenzl/oracle-free:slim-faststart
+    container_name: oracle-db-local
+    environment:
+      - ORACLE_PASSWORD=${DBPASSWORD}
+    ports:
+      - "1521:1521"
+    volumes:
+      - ./database-setup:/container-entrypoint-initdb.d
+    command: sh -c "chmod +x /container-entrypoint-initdb.d/001-add-users.sh"
