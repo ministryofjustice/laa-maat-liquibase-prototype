@@ -50,7 +50,7 @@ public class LiquibaseRDSManager {
 
             Database dataBase = DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(conn));
             Liquibase liquiBase = new liquibase.Liquibase(
-                    "db.changelog-master.yaml", new ClassLoaderResourceAccessor(), dataBase);
+                    "db/changelog-master.yaml", new ClassLoaderResourceAccessor(), dataBase);
 
             Map<String, Object> scopeObjects = new HashMap<>();
             scopeObjects.put(Scope.Attr.database.name(), liquiBase.getDatabase());

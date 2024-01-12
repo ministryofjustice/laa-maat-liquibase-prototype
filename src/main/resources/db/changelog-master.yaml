@@ -1,5 +1,5 @@
 databaseChangeLog:
   - include:
-      file: ./changesets/001-create-new-package-and-procedure.sql
+      file: db/changesets/001-create-new-package-and-procedure.sql
   - include:
-      file: ./changesets/002-update-existing-package-and-procedure.sql
+      file: db/changesets/002-update-existing-package-and-procedure.sql
