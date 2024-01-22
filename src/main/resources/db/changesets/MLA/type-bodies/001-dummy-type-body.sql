@@ -1,9 +1,9 @@
 --liquibase formatted sql
 
---changeset mtac50:001-dummy-type-body runOnChange:true
+--changeset mtac50:001-dummy-type-body runOnChange:true splitStatements:false stripComments:false
 CREATE OR REPLACE TYPE BODY MLA.DummyType AS
-    MEMBER FUNCTION getFullName RETURN VARCHAR2 IS
+  constructor function DummyType return self as result as
     BEGIN
-        RETURN name;
+        return;
     END;
 END;
