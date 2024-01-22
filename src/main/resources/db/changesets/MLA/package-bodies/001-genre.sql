@@ -1,10 +1,6 @@
 --liquibase formatted sql
 
---changeset mtac50:create-package splitStatements:false
-CREATE OR REPLACE PACKAGE MLA.genre AS
-    PROCEDURE get_genre_name(p_genre_id IN NUMBER, p_genre_name OUT VARCHAR2);
-END genre;
-
+--changeset mtac50:001-genre runOnChange:true
 CREATE OR REPLACE PACKAGE BODY MLA.genre AS
     PROCEDURE get_genre_name(p_genre_id IN NUMBER, p_genre_name OUT VARCHAR2) IS
     BEGIN
