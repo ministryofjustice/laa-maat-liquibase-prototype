@@ -5,41 +5,41 @@ databaseChangeLog:
 
   # Populate TOGDATA schema
     - includeAll:
-      path: db/changesets/TOGDATA/initial-schemas
+        path: db/changesets/TOGDATA/initial-schemas
     - includeAll:
-      path: db/changesets/TOGDATA/type-headers
+        path: db/changesets/TOGDATA/type-headers
     - includeAll:
-      path: db/changesets/TOGDATA/type-bodies
+        path: db/changesets/TOGDATA/type-bodies
     - includeAll:
-      path: db/changesets/TOGDATA/package-headers
+        path: db/changesets/TOGDATA/package-headers
     - includeAll:
-      path: db/changesets/TOGDATA/package-bodies
+        path: db/changesets/TOGDATA/package-bodies
     - includeAll:
-      path: db/changesets/TOGDATA/procedures
+        path: db/changesets/TOGDATA/procedures
     - includeAll:
-      path: db/changesets/TOGDATA/triggers
+        path: db/changesets/TOGDATA/triggers
     - includeAll:
-      path: db/changesets/TOGDATA/views
+        path: db/changesets/TOGDATA/views
     - includeAll:
-      path: db/changesets/TOGDATA/schema-migrations
+        path: db/changesets/TOGDATA/schema-migrations
 
   # Populate MLA schema
     - includeAll:
-      path: db/changesets/MLA/initial-schemas
+        path: db/changesets/MLA/initial-schemas
     - includeAll:
-      path: db/changesets/MLA/type-headers
+        path: db/changesets/MLA/type-headers
     - includeAll:
-      path: db/changesets/MLA/type-bodies
+        path: db/changesets/MLA/type-bodies
     - includeAll:
-      path: db/changesets/MLA/package-headers
+        path: db/changesets/MLA/package-headers
     - includeAll:
-      path: db/changesets/MLA/package-bodies
+        path: db/changesets/MLA/package-bodies
     - includeAll:
-      path: db/changesets/MLA/procedures
+        path: db/changesets/MLA/procedures
     - includeAll:
-      path: db/changesets/MLA/triggers
+        path: db/changesets/MLA/triggers
     - includeAll:
-      path: db/changesets/MLA/views
+        path: db/changesets/MLA/views
     - includeAll:
-      path: db/changesets/MLA/schema-migrations
+        path: db/changesets/MLA/schema-migrations
 
