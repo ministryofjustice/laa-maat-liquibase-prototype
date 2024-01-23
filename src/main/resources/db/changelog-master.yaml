@@ -1,5 +1,44 @@
 databaseChangeLog:
-  - include:
-      file: db/changesets/001-create-new-package-and-procedure.sql
-  - include:
-      file: db/changesets/002-update-existing-package-and-procedure.sql
+  # Change sets will be executed in the order they appear in this file.
+  # Change sets within an 'includeAll' directory will be executed in alphabetical order unless they are prefixed with a
+  # number e.g. 001 or 002.
+
+  # Populate TOGDATA schema
+  - includeAll:
+      path: db/changesets/TOGDATA/initial-schemas
+  - includeAll:
+      path: db/changesets/TOGDATA/type-headers
+  - includeAll:
+      path: db/changesets/TOGDATA/type-bodies
+  - includeAll:
+      path: db/changesets/TOGDATA/package-headers
+  - includeAll:
+      path: db/changesets/TOGDATA/package-bodies
+  - includeAll:
+      path: db/changesets/TOGDATA/procedures
+  - includeAll:
+      path: db/changesets/TOGDATA/triggers
+  - includeAll:
+      path: db/changesets/TOGDATA/views
+  - includeAll:
+      path: db/changesets/TOGDATA/schema-migrations
+
+  # Populate MLA schema
+  - includeAll:
+      path: db/changesets/MLA/initial-schemas
+  - includeAll:
+      path: db/changesets/MLA/type-headers
+  - includeAll:
+      path: db/changesets/MLA/type-bodies
+  - includeAll:
+      path: db/changesets/MLA/package-headers
+  - includeAll:
+      path: db/changesets/MLA/package-bodies
+  - includeAll:
+      path: db/changesets/MLA/procedures
+  - includeAll:
+      path: db/changesets/MLA/triggers
+  - includeAll:
+      path: db/changesets/MLA/views
+  - includeAll:
+      path: db/changesets/MLA/schema-migrations
